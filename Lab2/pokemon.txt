@@ -1,0 +1,2 @@
+C:\Users\Edeqr\Documents\GitHub\DIG4503\Lab2>node fetchfile.js
+This is a metapod and its ID is 11
