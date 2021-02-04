@@ -1,10 +1,10 @@
 import React from 'react';
-import HomePage  from './homepage'
+import HomePage  from './components./homepage'
 
 function App() {
     const fname = 'Edequiel';
     return(
-        <HomePage fristname={fname} />
+        <HomePage firstname={fname} />
     )
 }
 
