@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const Post = () => {
+const Posts = () => {
     const [posts, setPosts] = useState();
 
     useEffect (() => {
@@ -27,4 +27,4 @@ const Post = () => {
     );
 }
 
-export default Post;
+export default Posts;
