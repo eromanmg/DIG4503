@@ -11,13 +11,13 @@ let database = JSON.parse(fileContents);
 App.get("/employees/:name", (req, res) => {
     let result = {"error": "Not found"};
 
-    database.forEach((value) => {
-        if(req.params.name == value.name) {
+    database.forEach((value) => {//digs into the database
+        if(req.params.name == value.name) {//if data requested is equal == shows result
             result = value;
         }
     });
 
-    res.json(result);
+    res.json(result);//gives result
 })
 
 App.get("/ages/:number", (req, res) => {
