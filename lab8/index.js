@@ -8,7 +8,7 @@ let fileContents = fs.readFileSync("database.json");
 
 let database = JSON.parse(fileContents);
 
-App.get("employees/:name", (req, res) => {
+App.get("/employees/:name", (req, res) => {
     let result = {"error": "Not found"};
 
     database.forEach((value) => {
@@ -20,11 +20,11 @@ App.get("employees/:name", (req, res) => {
     res.json(result);
 })
 
-App.get("ages/:number", (req, res) => {
+App.get("/ages/:number", (req, res) => {
     let result = {"error": "Not found"};
 
     database.forEach((value) => {
-        if(req.params.age == value.age) {
+        if(req.params.ages == value.ages) {
             result = value;
         }
     });
