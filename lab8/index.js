@@ -20,6 +20,18 @@ App.get("employees/:name", (req, res) => {
     res.json(result);
 })
 
+App.get("ages/:number", (req, res) => {
+    let result = {"error": "Not found"};
+
+    database.forEach((value) => {
+        if(req.params.age == value.age) {
+            result = value;
+        }
+    });
+
+    res.json(result);
+})
+
 App.listen(port, () => {
     console.log("Server running!");
 })
