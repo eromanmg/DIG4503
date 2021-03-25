@@ -1,0 +1,86 @@
+<html>
+    <body>
+        <script>
+            function readName(event) {
+
+                event.preventDefault();
+
+                let element = document.querySelector("#name")
+
+                fetch("/employees/" + element.value)
+                .then((res) => {
+                    return res.json();
+                })
+
+                .then((processed) => {
+
+                    let reporting = document.querySelector("#reportingArea");
+
+                    if(processed.error) {
+                        reporting.innerHTML = processed.error;
+                    } else {
+                        reporting.innerHTML = processed.age;
+                    }
+                });
+            }
+
+            function readAges(event) {
+
+                event.preventDefault();
+
+                let element = document.querySelector("#age")
+
+                fetch("/ages/" + element.value)
+                .then((res) => {
+                    return res.json();
+                })
+
+                .then((processed) => {
+
+                    let reporting = document.querySelector("#reportingArea");
+
+                    if(processed.error) {
+                        reporting.innerHTML = processed.error;
+                    } else {
+                        reporting.innerHTML = processed.name;
+                    }
+                });
+            }
+
+            function createList(event) {
+                event.preventDefault();
+
+                let name = document.querySelector("#listName");
+
+                let age = document.querySelector("#listAge");
+
+                fetch("/list/" + name.value + "/" + age.value, {
+                    "method": "post"
+                }).then((res) => {
+                    return res.json();
+                }).then((processed) => {
+                    console.log(processed);
+                });
+            }
+        </script>
+        <h2>Name</h2>
+        <form onsubmit="readName(event)">
+            <input id="name" type="text">
+            <button>Submit</button>
+        </form>
+        <h2>Age</h2>
+        <form onsubmit="readAges(event)">
+            <input id="age" type="text">
+            <button>Submit</button>
+        </form>
+        <hr>
+        <form onsubmit="createList(event)">
+            <input id="listName" type="text">
+            <input id="listAge" type="text">
+            <button>Submit</button>
+        </form>
+        <hr>
+        <h2>Reporting</h2>
+        <div id="reportingArea"></div>
+    </body>
+</html>
