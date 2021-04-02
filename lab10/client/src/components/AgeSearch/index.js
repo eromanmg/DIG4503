@@ -21,6 +21,7 @@ class AgeSearch extends React.Component {
                         reporting.innerHTML = processed.name;
                     }
                 });
+                
                 element.value  = "";
             }
 
@@ -28,7 +29,7 @@ class AgeSearch extends React.Component {
                 return(
                     <div>
                         <h2>Age</h2>
-                        <form onSubmit={this.readAges}>
+                    <form onSubmit={this.readAges}>
                         <input id="age" type="text"/>
                         <button>Submit</button>
                      </form>
