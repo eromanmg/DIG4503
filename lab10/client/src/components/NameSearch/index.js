@@ -29,10 +29,10 @@ class NameSearch extends React.Component {
         return(
             <div>
                 <h2>Name</h2>
-                <form onSubmit={this.readName}>
+            <form onSubmit={this.readName}>
                 <input id="name" type="text"/>
                 <button>Submit</button>
-                </form>
+            </form>
             </div>
         )
     }
