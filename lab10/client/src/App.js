@@ -7,9 +7,9 @@ import AgeSearch from "./components/AgeSearch";
 function App() {
   return (
     <div className="App">
-      <NameSearch/>
-      <AgeSearch/>
-      <ReportingArea/>
+      <NameSearch />
+      <AgeSearch />
+      <ReportingArea />
 
     </div>
   );
