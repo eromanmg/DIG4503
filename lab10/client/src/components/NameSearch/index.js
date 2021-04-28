@@ -1,5 +1,5 @@
 import React from 'react';
-import '../nameform.css';
+import '../formstyle.css';
 
 class NameSearch extends React.Component {
     readName(event) {
@@ -28,7 +28,7 @@ class NameSearch extends React.Component {
 
     render() {
         return(
-            <div className="namewrapper">
+            <div className="formwrapper">
                 <h2>Name</h2>
             <form onSubmit={this.readName}>
                 <input id="name" type="text"/>
