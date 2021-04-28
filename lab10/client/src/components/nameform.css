@@ -1,0 +1,17 @@
+.namewrapper {
+    background-color: #f2f2f2;
+}
+
+.namewrapper h2{
+    font-size: 35px;
+    
+}
+
+.namewrapper input {
+    box-shadow: 3px 3px blue;
+}
+
+.namewrapper button {
+    margin: 10px;
+    box-shadow: 3px 3px blue;
+}
