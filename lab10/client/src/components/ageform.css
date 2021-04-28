@@ -1,0 +1,17 @@
+.agewrapper {
+    background-color: #f2f2f2;
+}
+
+.agewrapper h2{
+    font-size: 35px;
+    
+}
+
+.agewrapper input {
+    box-shadow: 3px 3px blue;
+}
+
+.agewrapper button {
+    margin: 10px;
+    box-shadow: 3px 3px blue;
+}

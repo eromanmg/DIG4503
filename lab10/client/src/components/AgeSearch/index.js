@@ -1,4 +1,5 @@
 import React from "react";
+import '../ageform.css';
 
 class AgeSearch extends React.Component {
     readAges(event) {
@@ -27,7 +28,7 @@ class AgeSearch extends React.Component {
 
             render() {
                 return(
-                    <div>
+                    <div className="agewrapper">
                         <h2>Age</h2>
                     <form onSubmit={this.readAges}>
                         <input id="age" type="text"/>
