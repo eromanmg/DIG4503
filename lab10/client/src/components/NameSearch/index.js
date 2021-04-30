@@ -8,14 +8,14 @@ class NameSearch extends React.Component {
 
         let element = document.querySelector("#name")
 
-        fetch("/employees/" + element.value)
+        fetch("/employees/" + element.value)//digs into database
         .then((res) => {
             return res.json();
         })
 
         .then((processed) => {
 
-            let reporting = document.querySelector("#reportingArea");
+            let reporting = document.querySelector("#reportingArea"); //displays data in the reporting area if true/false
 
             if(processed.error) {
                 reporting.innerHTML = processed.error;
