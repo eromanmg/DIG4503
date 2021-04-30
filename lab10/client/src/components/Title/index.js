@@ -4,7 +4,7 @@ import '../titlestyling.css';
 function Title () {
     return (
         <div className="t">
-            <h1>Enter Your Name or Age</h1>
+            <h1>Employee Form</h1>
         </div>
     )
 }
